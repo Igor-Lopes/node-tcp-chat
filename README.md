@@ -27,11 +27,11 @@ Um chat tcp simples feito em Node.js para o Projeto #1 da disciplina de Redes de
 
     `git clone https://github.com/Igor-Lopes/node-tcp-chat.git`
 
-3. Execute o app:
+3. Execute o app servidor:
 
     Navegue até a raiz do repositório e execute o arquivo `app.js` através do seu terminal com o seguinte comando:
 
-    `node app.js`
+    `node server.js`
     
     A seguinte mensagem será exibida no terminal:
     
@@ -56,7 +56,15 @@ Com a aplicação servidora excutando, é possível conectar os clientes TCP.
 
 * Conectando-se ao servidor:
 
-  É necessário possuir um cliente tcp instalado. Neste exemplo será utilizado o [netcat](http://netcat.sourceforge.net/)
+  Para conectar-se ao servidor, é necessário executar o app do cliente:
+  
+  `node client.js`
+  
+  Você deverá receber uma mensagem de boas-vindas do servidor:
+  
+  `Bem-vindo ::127.0.0.1:64663`
+  
+  É possível também se conectar com um cliente TCP instalado, como o [netcat](http://netcat.sourceforge.net/)
 
   Digite no terminal e espeficifique o host e a porta utilizada:
 
@@ -87,8 +95,27 @@ Clientes conectados:
 
 * Enviando mensagem para todos os clientes:
 
-  Para enviar mensagem para todos os clientes, basta digitar a mensagem no terminal e pressionar ENTER
+  Para enviar mensagem para todos os clientes, basta digitar sua mensagem no terminal e pressionar ENTER
   
 * Enviando mensagem privada:
 
-  Para enviar uma mensagem privada, digite o argumento `--p` seguido de espaço e o cliente desejado (IP e porta, como ocorre na listagem)
+  Para enviar uma mensagem privada, digite o argumento `--p` seguido de espaço e o cliente desejado (IP e porta, como ocorre **exatamente** na listagem)
+  
+  Exemplo:
+  
+  `-list` 
+  
+  ```
+Clientes conectados:
+-----------------------
+::1:61586
+::1:61657
+::1:61658
+-----------------------
+```
+
+  `teste mensagem privada --p ::1:61658`
+  
+  No recepiente(::1:61658) será exibido a mensagem do destinatário(::1:61586):
+  `(Mensagem Privada)::1:61586 disse: teste mensagem privada`
+  
