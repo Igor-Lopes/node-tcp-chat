@@ -29,7 +29,7 @@ Um chat tcp simples feito em Node.js para o Projeto #1 da disciplina de Redes de
 
 3. Execute o app servidor:
 
-    Navegue até a raiz do repositório e execute o arquivo `app.js` através do seu terminal com o seguinte comando:
+    Navegue até a raiz do repositório e execute o arquivo `server.js` através do seu terminal com o seguinte comando:
 
     `node server.js`
     
@@ -37,7 +37,7 @@ Um chat tcp simples feito em Node.js para o Projeto #1 da disciplina de Redes de
     
     `Servidor escutando na porta 5000`
     
-    A porta default utilizada é a 5000. Caso deseje trocá-la, altere a variável **port** no início de app.js:
+    A porta default utilizada é a 5000. Caso deseje trocá-la, altere a variável **port** no início de server.js:
     
     
 ```javascript
