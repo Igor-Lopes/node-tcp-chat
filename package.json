@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Igor-Lopes/node-tcp-chat/issues"
   },
-  "homepage": "https://github.com/Igor-Lopes/node-tcp-chat#readme"
+  "homepage": "https://github.com/Igor-Lopes/node-tcp-chat#readme",
+  "dependencies": {
+    "node-rsa": "^0.4.2",
+    "rsa-keygen": "^1.0.6"
+  }
 }
